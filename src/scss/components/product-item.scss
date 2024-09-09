@@ -1,0 +1,124 @@
+.title {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 62.27px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.list-products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  font-family: "Plus Jakarta Sans";
+  margin: 0 100px;
+  .product-item {
+    .product-body {
+      position: relative;
+      background: #f6f6f6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .product-image-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        .product-image {
+          background: url(/src/assets/images/product\ 10.png);
+          background-size: cover;
+          position: absolute;
+          width: 60%;
+          height: 100%;
+          top: 0px;
+        }
+      }
+      .product-label {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        background: #ff9807 !important;
+        padding: 2px 12px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 120px;
+      }
+      .wrap-marquee {
+        position: absolute;
+        bottom: 0;
+        height: 25px;
+        width: 100%;
+        .marquee {
+          background: #00205b;
+          height: 25px;
+          overflow: hidden;
+          position: relative;
+          .marquee-btn {
+            border: none;
+            display: block;
+            width: 200%;
+            height: 30px;
+            position: absolute;
+            overflow: hidden;
+            animation: marquee 5s linear infinite;
+            .helo {
+              display: inline-block;
+              letter-spacing: 5px;
+              font-size: 12px;
+              font-weight: 400;
+              color: #fff;
+              font-family: Plus Jakarta Sans;
+              text-transform: uppercase;
+              width: 100%;
+              text-wrap: nowrap;
+            }
+          }
+        }
+      }
+    }
+    .product-name {
+      color: #00205b;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20.16px;
+      display: inline-block;
+      margin: 20px 0 12px;
+    }
+    .product-info {
+      font-size: 16px;
+      display: flex;
+      gap: 12px;
+      .product-sale {
+        color: #ba0c2f;
+        font-weight: 700;
+      }
+      .product-before-sale {
+        color: #878690;
+        font-weight: 500;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .list-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+    .list-products {
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0 10px;
+    }
+  }
