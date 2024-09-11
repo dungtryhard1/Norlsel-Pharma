@@ -2,6 +2,10 @@ p {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 .title {
   font-family: "Anton", sans-serif;
   font-weight: 400;
@@ -10,40 +14,31 @@ p {
   line-height: 62.27px;
   text-align: center;
   margin-bottom: 40px;
+  color: #00205b;
 }
 
 .list-products {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
   font-family: "Plus Jakarta Sans";
   margin: 0 100px;
 }
 .list-products .product-item .product-body {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background-color: #f6f6f6;
   position: relative;
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .list-products .product-item .product-body .product-image-wrapper {
-  position: relative;
+  padding: 20px 40px;
   width: 100%;
-  padding-top: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-.list-products .product-item .product-body .product-image-wrapper .product-image {
-  background: url(/src/assets/images/product\ 10.png);
-  background-size: cover;
-  position: absolute;
-  width: 60%;
   height: 100%;
-  top: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.list-products .product-item .product-body .product-label {
+.list-products .product-item .product-body .product-label, .list-products .product-item .product-body .product-label-discount, .list-products .product-item .product-body .product-label-best-seller, .list-products .product-item .product-body .product-label-new, .list-products .product-item .product-body .product-label-popular {
   position: absolute;
   left: 8px;
   top: 8px;
@@ -51,7 +46,6 @@ p {
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
-  background: #ff9807 !important;
   padding: 2px 12px;
   overflow: hidden;
   white-space: nowrap;
@@ -61,12 +55,12 @@ p {
 .list-products .product-item .product-body .wrap-marquee {
   position: absolute;
   bottom: 0;
-  height: 25px;
+  height: 30px;
   width: 100%;
 }
 .list-products .product-item .product-body .wrap-marquee .marquee {
   background: #00205b;
-  height: 25px;
+  height: 30px;
   overflow: hidden;
   position: relative;
 }
@@ -80,28 +74,36 @@ p {
   animation: marquee 5s linear infinite;
 }
 .list-products .product-item .product-body .wrap-marquee .marquee .marquee-btn .helo {
-  display: inline-block;
-  letter-spacing: 5px;
   font-size: 12px;
   font-weight: 400;
-  color: #fff;
   font-family: Plus Jakarta Sans;
+  display: inline-block;
+  color: #fff;
   text-transform: uppercase;
   width: 100%;
   text-wrap: nowrap;
+  line-height: 15.12px;
+}
+.list-products .product-item .product-body .wrap-marquee .marquee .marquee-btn .helo .dot {
+  background-color: rgba(255, 255, 255, 0.3490196078);
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 8px;
 }
 .list-products .product-item .product-name {
   color: #00205b;
   font-weight: 700;
   font-size: 16px;
   line-height: 20.16px;
-  display: inline-block;
-  margin: 20px 0 12px;
+  margin: 24px 0 8px;
 }
 .list-products .product-item .product-info {
   font-size: 16px;
   display: flex;
   gap: 12px;
+  margin-bottom: 20px;
 }
 .list-products .product-item .product-info .product-sale {
   color: #ba0c2f;
@@ -113,15 +115,25 @@ p {
   text-decoration: line-through;
 }
 
-@media (max-width: 992px) {
-  .list-products {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.product-label-popular {
+  background: #ff9807 !important;
 }
-@media (max-width: 576px) {
+
+.product-label-new {
+  background: #00c566 !important;
+}
+
+.product-label-best-seller {
+  background: #1580fa !important;
+}
+
+.product-label-discount {
+  background: #ff4747 !important;
+}
+
+@media (max-width: 768px) {
   .list-products {
-    grid-template-columns: repeat(1, 1fr);
-    margin: 0 10px;
+    margin: 0;
   }
 }
 * {
