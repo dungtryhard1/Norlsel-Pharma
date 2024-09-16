@@ -1,0 +1,47 @@
+$mainColor: #00205b;
+footer {
+  font-family: Plus Jakarta Sans;
+  margin-top: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  .footer-content {
+    padding: 50px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    .brand-contact {
+      display: flex;
+      flex-direction: column;
+      margin: 16px 0;
+    }
+    .footer-direction-item {
+      display: flex;
+      flex-direction: column;
+      text-wrap: nowrap;
+      gap: 12px;
+    }
+  }
+  .footer-copyright {
+    color: #878690;
+    padding: 20px;
+  }
+}
+.footer-title {
+  color: $mainColor;
+  list-style-type: none;
+}
+.footer-subtext {
+  color: #878690;
+  list-style-type: none;
+  a {
+    color: #878690;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo-image {
+    margin-bottom: 25px;
+  }
+  .footer-direction-item {
+    margin-top: 20px;
+  }
+}

@@ -28,7 +28,6 @@ img {
   position: relative;
 }
 .list-products .product-item .product-body .product-image-wrapper {
-  padding: 20px 40px;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -38,10 +37,13 @@ img {
   align-items: center;
   justify-content: center;
 }
-.list-products .product-item .product-body .product-label, .list-products .product-item .product-body .product-label-discount, .list-products .product-item .product-body .product-label-best-seller, .list-products .product-item .product-body .product-label-new, .list-products .product-item .product-body .product-label-popular {
+.list-products .product-item .product-body .product-image-wrapper .product-label-wrapper {
   position: absolute;
+  gap: 4px;
   left: 8px;
   top: 8px;
+}
+.list-products .product-item .product-body .product-label, .list-products .product-item .product-body .product-label-discount, .list-products .product-item .product-body .product-label-best-seller, .list-products .product-item .product-body .product-label-new, .list-products .product-item .product-body .product-label-popular {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 14px;
@@ -51,40 +53,26 @@ img {
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 120px;
+  color: #fff;
 }
-.list-products .product-item .product-body .wrap-marquee {
+.list-products .product-item .product-body marquee {
   position: absolute;
+  background-color: #00205b;
   bottom: 0;
-  height: 30px;
-  width: 100%;
 }
-.list-products .product-item .product-body .wrap-marquee .marquee {
-  background: #00205b;
-  height: 30px;
-  overflow: hidden;
-  position: relative;
+.list-products .product-item .product-body marquee .marree-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px;
+  line-height: 15px;
 }
-.list-products .product-item .product-body .wrap-marquee .marquee .marquee-btn {
-  border: none;
-  display: block;
-  width: 200%;
-  height: 30px;
-  position: absolute;
-  overflow: hidden;
-  animation: marquee 5s linear infinite;
-}
-.list-products .product-item .product-body .wrap-marquee .marquee .marquee-btn .helo {
-  font-size: 12px;
-  font-weight: 400;
-  font-family: Plus Jakarta Sans;
-  display: inline-block;
+.list-products .product-item .product-body marquee .marree-wrapper .marquee-text {
   color: #fff;
   text-transform: uppercase;
-  width: 100%;
-  text-wrap: nowrap;
-  line-height: 15.12px;
+  font-size: 12px;
+  font-weight: 400;
 }
-.list-products .product-item .product-body .wrap-marquee .marquee .marquee-btn .helo .dot {
+.list-products .product-item .product-body marquee .marree-wrapper .marquee-text .dot {
   background-color: rgba(255, 255, 255, 0.3490196078);
   width: 6px;
   height: 6px;
@@ -284,9 +272,12 @@ img {
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
+  margin-right: 12px;
   display: inline-block;
+  flex: 0 0 12%;
 }
-.slide #filter__sliderBtnRight {
+.slide .arrow-btn {
+  display: flex;
   border-radius: 50%;
   background: #00205b;
   justify-content: center;
@@ -300,7 +291,8 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  flex-shrink: 0;
+  flex: 0 0 88%;
+  max-width: 88%;
 }
 .slide .slide-content .slide-body {
   display: flex;
@@ -345,8 +337,64 @@ img {
 }
 
 @media (max-width: 768px) {
-  .slide-title {
+  .slide {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .slide .slide-title {
     margin-bottom: 8px;
+  }
+  .slide .slide-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+footer {
+  font-family: Plus Jakarta Sans;
+  margin-top: 50px;
+  font-size: 14px;
+  font-weight: 500;
+}
+footer .footer-content {
+  padding: 50px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+footer .footer-content .brand-contact {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 0;
+}
+footer .footer-content .footer-direction-item {
+  display: flex;
+  flex-direction: column;
+  text-wrap: nowrap;
+  gap: 12px;
+}
+footer .footer-copyright {
+  color: #878690;
+  padding: 20px;
+}
+
+.footer-title {
+  color: #00205b;
+  list-style-type: none;
+}
+
+.footer-subtext {
+  color: #878690;
+  list-style-type: none;
+}
+.footer-subtext a {
+  color: #878690;
+}
+
+@media (max-width: 992px) {
+  .logo-image {
+    margin-bottom: 25px;
+  }
+  .footer-direction-item {
+    margin-top: 20px;
   }
 }
 * {

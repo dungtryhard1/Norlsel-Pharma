@@ -17,23 +17,22 @@
 
 <body>
     <div class="container">
-        <div class="slide row">
-            <p class="slide-title col-12 col-md-2">Selected for you</p>
-            <div class="slide-content col-12 col-md-10">
+        <div class="slide">
+            <p class="slide-title">Selected for you</p>
+            <div class="slide-content">
                 <ul class="slide-body scroll">
-                    <li draggable="false"><a href="">Immune Support</a></li>
-                    <li draggable="false"><a href="">Minerals</a></li>
-                    <li draggable="false"><a href="">Brain & Cognitive</a></li>
-                    <li draggable="false"><a href="">Heart</a></li>
-                    <li draggable="false"><a href="">Antioxidants</a></li>
-                    <li draggable="false"><a href="">Antioxidants</a></li>
-                    <li draggable="false"><a href="">Antioxidants</a></li>
-                    <li draggable="false"><a href="">Antioxidants</a></li>
-                    <li draggable="false"><a href="">Antioxidants</a></li>
-                    <li draggable="false"><a href="">Antioxidants</a></li>
+                    <li><a href="">Immune Support</a></li>
+                    <li><a href="">Minerals</a></li>
+                    <li><a href="">Brain & Cognitive</a></li>
+                    <li><a href="">Heart</a></li>
+                    <li><a href="">Antioxidants</a></li>
+                    <li><a href="">Atherosclerosis</a></li>
+                    <li><a href="">Cardiovascular </a></li>
+                    <li><a href="">Blood pressure </a></li>
+                    <li><a href="">Circulation </a></li>
+                    <li><a href="">Arrhythmia </a></li>
                 </ul>
-                <button id="filter__sliderBtnRight" type="button" class="filter__sliderBtn right"
-                    style="display: flex;">
+                <button class="arrow-btn" type="button">
                     <img src="/src/assets/images/arrow.png" />
                 </button>
             </div>
@@ -45,17 +44,18 @@
                     <div class="product-body">
                         <div class="product-image-wrapper">
                             <img class="product-image" src="/src/assets/images/product 10.png" />
-                            <span class="product-label-popular badge rounded-pill bg-primary">Popular</span>
-                        </div>
-                        <div class="wrap-marquee">
-                            <div class="marquee">
-                                <div class="marquee-btn">
-                                    <span class="helo">free shipping on kr 35+ <div class="dot"></div> SALE 30% ALL
-                                        PRODUCTS
-                                    </span>
-                                </div>
+                            <div class="product-label-wrapper">
+                                <div class="product-label-popular badge rounded-pill bg-primary">Popular</div>
+                                <div class="product-label-new badge rounded-pill bg-primary">new</div>
+                                <div class="product-label-discount badge rounded-pill bg-primary">-15%</div>
                             </div>
                         </div>
+                        <marquee>
+                            <div class="marree-wrapper">
+                                <span class="marquee-text">free shipping on kr 35+ <div class="dot"></div> SALE 30% ALL PRODUCTS
+                                </span>
+                            </div>
+                        </marquee>
                     </div>
                     <p class="product-name">Nordic Seal Omega 3 S1 Nordic Seal Omega 3 S1</p>
                     <div class="product-info">
@@ -67,7 +67,9 @@
                     <div class="product-body">
                         <div class="product-image-wrapper">
                             <img class="product-image" src="/src/assets/images/product 11.png" />
-                            <span class="product-label-new badge rounded-pill bg-primary">new</span>
+                            <div class="product-label-wrapper">
+                                <span class="product-label-new badge rounded-pill bg-primary">new</span>
+                            </div>
                         </div>
                     </div>
                     <p class="product-name">Nordic Seal Omega 3 Kids Nordic Seal Omega 3 S1</p>
@@ -79,7 +81,9 @@
                     <div class="product-body">
                         <div class="product-image-wrapper">
                             <img class="product-image" src="/src/assets/images/product 12.png" />
-                            <span class="product-label-best-seller badge rounded-pill bg-primary">best seller</span>
+                            <div class="product-label-wrapper">
+                                <span class="product-label-best-seller badge rounded-pill bg-primary">best seller</span>
+                            </div>
                         </div>
                     </div>
                     <p class="product-name">Nordic Seal Omega 2 S4 Nordic Seal Omega 3 S1</p>
@@ -92,7 +96,9 @@
                     <div class="product-body">
                         <div class="product-image-wrapper">
                             <img class="product-image" src="/src/assets/images/product 13.png" />
-                            <span class="product-label-discount badge rounded-pill bg-primary">-15%</span>
+                            <div class="product-label-wrapper">
+                                <span class="product-label-discount badge rounded-pill bg-primary">-15%</span>
+                            </div>
                         </div>
                     </div>
                     <p class="product-name">Nordic Seal Omega 3 S1 Nordic Seal Omega 3 S1</p>
@@ -149,13 +155,56 @@
                 <div class="subscribe-btn">Subscribe</div>
             </div>
         </div>
+        <footer>
+            <div class="footer-content row">
+                <div class="col-lg-4 col-12">
+                    <img class="logo-image" src="/src/assets/images/Logo.png" alt="Logo Image" />
+                    <div class="brand-contact">
+                        <span class="footer-title">Address</span>
+                        <span class="footer-subtext">Tollbugata 115, 3041 Drammen, Norway</span>
+                    </div>
+                    <div class="brand-contact">
+                        <span class="footer-title">Email</span>
+                        <span class="footer-subtext">firmapost@norselpharma.no</span>
+                    </div>
+                    <div class="brand-contact">
+                        <span class="footer-title">Phone Number</span>
+                        <span class="footer-subtext">+4790995934</span>
+                    </div>
+                </div>
+                <div class="col-lg-8 row">
+                    <ul class="footer-direction-item col-6 col-lg-4">
+                        <li class="footer-title">Customer service</li>
+                        <li class="footer-subtext"><a href="">Tips & Advice</a></li>
+                        <li class="footer-subtext"><a href="">Partners and Franchise</a></li>
+                        <li class="footer-subtext"><a href="">Shipping and delivery</a></li>
+                        <li class="footer-subtext"><a href="">Contact us</a></li>
+                    </ul>
+                    <ul class="footer-direction-item col-6 col-lg-4">
+                        <li class="footer-title">Useful Links</li>
+                        <li class="footer-subtext"><a href="">Privacy Policy</a></li>
+                        <li class="footer-subtext"><a href="">Sales Conditions</a></li>
+                        <li class="footer-subtext"><a href="">Cookie Policy</a></li>
+                        <li class="footer-subtext"><a href="">Recruitment</a></li>
+                    </ul>
+                    <ul class="footer-direction-item col-6 col-lg-4 d-none d-lg-flex">
+                        <li class="footer-title">Member & Club</li>
+                        <li class="footer-subtext"><a href="">Tips & Advice</a></li>
+                        <li class="footer-subtext"><a href="">Partners and Franchise</a></li>
+                        <li class="footer-subtext"><a href="">Shipping and delivery</a></li>
+                        <li class="footer-subtext"><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright text-center">Copyright Norsel Pharma 2024. All Right Reserved</div>
+        </footer>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     const carousel = document.querySelector(".slide-body.scroll"),
         firstSlide = document.querySelectorAll(".slide-body.scroll li")[0],
-        arrowIcons = document.querySelectorAll(".filter__sliderBtn");
+        arrowIcons = document.querySelectorAll(".arrow-btn");
     let isDragStart = false,
         isDragging = false,
         prevPageX,

@@ -20,7 +20,6 @@ $mainColor: #00205b;
       background-color: #f6f6f6;
       position: relative;
       .product-image-wrapper {
-        padding: 20px 40px; 
         width: 100%;
         height: 100%;
         position: absolute;
@@ -29,11 +28,14 @@ $mainColor: #00205b;
         display: flex;
         align-items: center;
         justify-content: center;
+        .product-label-wrapper {
+          position: absolute;
+          gap: 4px;
+          left: 8px;
+          top: 8px;
+        }
       }
       .product-label {
-        position: absolute;
-        left: 8px;
-        top: 8px;
         text-transform: uppercase;
         font-weight: 500;
         font-size: 14px;
@@ -43,45 +45,29 @@ $mainColor: #00205b;
         white-space: nowrap;
         text-overflow: ellipsis;
         max-width: 120px;
+        color: #fff;
       }
-      .wrap-marquee {
+      marquee {
         position: absolute;
+        background-color: $mainColor;
         bottom: 0;
-        height: 30px;
-        width: 100%;
-        .marquee {
-          background: $mainColor;
-          height: 30px;
-          overflow: hidden;
-          position: relative;
-          .marquee-btn {
-            border: none;
-            display: block;
-            width: 200%;
-            height: 30px;
-            position: absolute;
-            overflow: hidden;
-            animation: marquee 5s linear infinite;
-            .helo {
-              font: {
-                size: 12px;
-                weight: 400;
-                family: Plus Jakarta Sans;
-              }
+        .marree-wrapper {
+          display: flex;
+          align-items: center;
+          padding: 7px 10px;
+          line-height: 15px;
+          .marquee-text {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 400;
+            .dot {
+              background-color: #ffffff59;
+              width: 6px;
+              height: 6px;
               display: inline-block;
-              color: #fff;
-              text-transform: uppercase;
-              width: 100%;
-              text-wrap: nowrap;
-              line-height: 15.12px;
-              .dot {
-                background-color: #ffffff59;
-                width: 6px;
-                height: 6px;
-                display: inline-block;
-                border-radius: 50%;
-                margin: 0 8px;
-              }
+              border-radius: 50%;
+              margin: 0 8px;
             }
           }
         }
