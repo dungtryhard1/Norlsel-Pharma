@@ -55,39 +55,24 @@ img {
   max-width: 120px;
   color: #fff;
 }
-.list-products .product-item .product-body .wrap-marquee {
+.list-products .product-item .product-body marquee {
   position: absolute;
+  background-color: #00205b;
   bottom: 0;
-  height: 30px;
-  width: 100%;
 }
-.list-products .product-item .product-body .wrap-marquee .marquee {
-  background: #00205b;
-  height: 30px;
-  overflow: hidden;
-  position: relative;
+.list-products .product-item .product-body marquee .marree-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 7px 10px;
+  line-height: 15px;
 }
-.list-products .product-item .product-body .wrap-marquee .marquee .marquee-btn {
-  border: none;
-  display: block;
-  width: 200%;
-  height: 30px;
-  position: absolute;
-  overflow: hidden;
-  animation: marquee 5s linear infinite;
-}
-.list-products .product-item .product-body .wrap-marquee .marquee .marquee-btn .marquee-text {
-  font-size: 12px;
-  font-weight: 400;
-  font-family: Plus Jakarta Sans;
-  display: inline-block;
+.list-products .product-item .product-body marquee .marree-wrapper .marquee-text {
   color: #fff;
   text-transform: uppercase;
-  width: 100%;
-  text-wrap: nowrap;
-  line-height: 15.12px;
+  font-size: 12px;
+  font-weight: 400;
 }
-.list-products .product-item .product-body .wrap-marquee .marquee .marquee-btn .marquee-text .dot {
+.list-products .product-item .product-body marquee .marree-wrapper .marquee-text .dot {
   background-color: rgba(255, 255, 255, 0.3490196078);
   width: 6px;
   height: 6px;
